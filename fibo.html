@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Fibonacci Series Generator</h1>
+<input type="number" id="terms" placeholder="Enter number of terms" />
+<button onclick="generateFibonacci()">Generate</button>
+<p id="result"></p>
+
+<script>
+    function generateFibonacci() {
+        const terms = parseInt(document.getElementById("terms").value);
+        let fib = [];
+        
+        let a = 0, b = 1;
+        for (let i = 0; i < terms; i++) {
+            fib.push(a);
+            let next = a + b;
+            a = b;
+            b = next;
+        }
+        
+        document.getElementById("result").innerText = `Fibonacci Series: ${fib.join(', ')}`;
+    }
+</script>
+
+</body>
+</html>
