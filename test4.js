@@ -38,9 +38,7 @@ s.displayInfo();*/
     }}
 let s=new Student();
 s.showDetails();
-s.displayInfo();*/
-
-
+s.displayInfo();
 class Student{
     id=1001;
     name="prashanth";
@@ -49,4 +47,5 @@ class Student{
     }
    }
 let s=new Student();
-s.showDetails();
+s.showDetails();*/
+
